@@ -1,6 +1,11 @@
 #!/usr/bin/env python3.8
 # coding=utf-8
 
+"""
+File: analysis.py
+Author: David Oravec (xorave05)
+"""
+
 from matplotlib import pyplot as plt
 import pandas as pd
 import seaborn as sns
