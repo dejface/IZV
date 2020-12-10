@@ -52,9 +52,9 @@ def plot_stat(data_source, fig_location = None, show_figure = False):
         data_by_region[regions[i]] = [[] for _ in range(len(years))]
     for i in range(len(data_source[1][0])):
         region = data_source[1][64][i] #get current region
-        date = data_source[1][3][i].year    #get year of accident
+        date = str(data_source[1][3][i].astype('datetime64[Y]'))    #get year of accident
         if region in data_by_region:    #if region is valid
-            count_accidents_by_year(region,data_by_region,date)
+            count_accidents_by_year(region,data_by_region,int(date))
             
     
     plt.figure(figsize=(8.27,11.69))    #a4 papersize
