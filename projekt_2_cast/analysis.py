@@ -216,7 +216,7 @@ def plot_damage(df: pd.DataFrame, fig_location: str = None,
     new_df = pd.concat([pha_df, stc_df, jhm_df, lbk_df], sort=False)
 
     new_df['Damage cause'] = pd.cut(x=new_df['p12'],
-                                    bins=[100, 201, 301, 401, 501, 601, 615],
+                                    bins=[100, 201, 301, 401, 501, 601, 616],
                                     right=False,
                                     include_lowest=True,
                                     labels=['wasn\'t caused by driver',
